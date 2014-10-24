@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0;url=http://ianzoe.com/" />
+	<!-- <meta http-equiv="refresh" content="0;url=http://ianzoe.com/" /> -->
 </head>
 <body>
-	
+	<script>
+		document.write(window.name || "noname");
+		if( window.name ){
+			setTimeout(function(){
+				window.location.href = window.name;
+			},5000)
+		}
+	</script>
 </body>
 </html>
