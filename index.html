@@ -9,7 +9,9 @@
 		document.write(window.name || "noname");
 		if( window.name ){
 			setTimeout(function(){
-				window.location.href = window.name;
+				var href = window.name;
+				window.name = "test";
+				window.location.href = href;
 			},5000)
 		}
 	</script>
